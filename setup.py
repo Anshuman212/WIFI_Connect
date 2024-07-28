@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='wifi_connect',
-    version='1.2',
+    version='1.5',
     packages=find_packages(),
     install_requires=[],
     entry_points={
@@ -12,6 +12,6 @@ setup(
     },
     author='Anshuman Rai',
     author_email='raianshuman171@gmail.com',
-    description='Python Project that connects to the best availalbe known networks which is a mannual task in Windows.',
+    description='A real-time problem solver.A Python Project that connects to the best availalbe known networks which is a mannual task in Windows.',
     url='https://github.com/Anshuman212/WIFI_Connect',
 )

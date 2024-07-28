@@ -11,9 +11,9 @@ def refresh_network_list():
 def get_known_networks():
     show_all_known_networks ='netsh wlan show profiles'
     show_all_active_networks='netsh wlan show networks'
-    result_all_known_network = subprocess.run(['cmd.exe', '/c', show_all_known_networks], capture_output=True, text=True,check=True)
+    result_all_known_network = subprocess.run(['cmd.exe', '/c', show_all_known_networks], capture_output=True,  encoding='utf-8',text=True,check=True)
     refresh_network_list()
-    result_all_active_network = subprocess.run(['cmd.exe', '/c', show_all_active_networks], capture_output=True, text=True,check=True)
+    result_all_active_network = subprocess.run(['cmd.exe', '/c', show_all_active_networks], encoding='utf-8', capture_output=True, text=True,check=True)
     networks_all_known=[]
     networks_all_active=[]
     for line in result_all_known_network.stdout.split('\n'):
